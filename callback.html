@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connected - Vice Cutroom</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Almost done</h1>
+<p>Copy this code, go back to Terminal, and paste it when it asks. Do not share it with anyone.</p>
+<div class="code" id="code">(no code in the address)</div>
+<p><button id="copy">Copy code</button></p>
+<p class="mut">This page does not send anything anywhere; it only shows what is in the address bar.</p>
+<script>
+var q=new URLSearchParams(location.search),c=q.get("code")||"",e=q.get("error_description")||q.get("error")||"";
+document.getElementById("code").textContent=c||(e?("TikTok said: "+e):"(no code in the address)");
+document.getElementById("copy").onclick=function(){if(c&&navigator.clipboard){navigator.clipboard.writeText(c);this.textContent="Copied"}};
+</script></main></body></html>
